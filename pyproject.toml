@@ -1,0 +1,25 @@
+[project]
+name = "pyprlink"
+version = "0.1.0"
+description = "TCP/IP client for communicating with local services"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+authors = [
+    {name = "Jenu Chacko", email ="jenu.chacko@wisc.edu"}
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_backend"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v"
+
+[project.scripts]
+pyprlink = "pyprlink.main:main"
