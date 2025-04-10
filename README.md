@@ -1,6 +1,8 @@
 # PyPrLink
 
-A TCP/IP client for communicating with local services.
+A TCP/IP client for communicating with PrairieView.
+Alternate for PraireLink Application from Python. 
+Python-PrairieLink (PyPrLink)
 
 ## Installation
 
@@ -44,3 +46,9 @@ Run tests:
 ```bash
 pytest
 ```
+
+## examples
+
+- ask_PV('-gmp','x')
+- ask_PV('-pg', '3','400')
+- ask_PV('-x')
