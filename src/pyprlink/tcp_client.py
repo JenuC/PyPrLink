@@ -10,7 +10,7 @@ load_dotenv()
 
 # tcp/ip address and port
 ADDRESS = os.getenv("ADDRESS")
-PORT = int(os.getenv("PORT"))
+PORT = os.getenv("PORT")
 LOG_LEVEL = os.getenv("LOG_LEVEL")
 
 # Configure logging (adjust level to logging.INFO or logging.ERROR to reduce verbosity)
@@ -45,7 +45,7 @@ def read_until_done(sock):
     return results
 
 def ask_PV(*args):
-    logging.debug((ADDRESS,PORT))
+    logging.debug((ADDRESS,int(PORT)))
     command = chr(1).join(args)
     if not command.endswith('\r\n'):
         command += '\r\n'    
@@ -60,6 +60,7 @@ def ask_PV(*args):
     except Exception as e:
         print(f"Error: {e}")
     finally:
-        sock.sendall("-x".encode())
-        sock.close()
+        if sock:
+            sock.sendall("-x".encode())
+            sock.close()
         
