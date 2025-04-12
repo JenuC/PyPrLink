@@ -16,8 +16,8 @@ pip install pyprlink
 ```python
 from pyprlink.tcp_client import ask_PV
 # Send commands to PrairieView
-ask_PV('-gmp', 'x')  # Get microscope position
-ask_PV('-pg', '3', '400')  # Set page number and value
+ask_PV('-gmp', 'x')  # Get motor position for X-stage
+ask_PV('-pg', '3', '400')  # Set PMT Gain on Channel 3 to 400
 ```
 ### From Command Line
 After installation, you can use the `pyprlink` command directly:
