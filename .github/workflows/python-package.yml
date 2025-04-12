@@ -11,8 +11,8 @@ on:
       - 'tests/**'              # Any files in tests directory
       - 'pyproject.toml'        # Package configuration
       - '.github/workflows/**'   # Workflow files themselves
-      - 'requirements.txt'      # If you add this in future
-      - 'setup.py'              # If you add this in future
+      #- 'requirements.txt'      
+      #- 'setup.py'            
   pull_request:
     branches: [ "main" ]
     paths:
