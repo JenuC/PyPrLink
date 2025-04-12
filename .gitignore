@@ -11,3 +11,6 @@ wheels/
 
 # uv.lock file for uv package manager
 uv.lock
+
+# test loading locally
+src/pyprlink/install_test.py
