@@ -6,8 +6,22 @@ name: Python package
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - '**.py'                  # Any Python files
+      - 'tests/**'              # Any files in tests directory
+      - 'pyproject.toml'        # Package configuration
+      - '.github/workflows/**'   # Workflow files themselves
+      - 'requirements.txt'      # If you add this in future
+      - 'setup.py'              # If you add this in future
   pull_request:
     branches: [ "main" ]
+    paths:
+      - '**.py'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - '.github/workflows/**'
+      - 'requirements.txt'
+      - 'setup.py'
   
 
 jobs:
@@ -17,7 +31,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.10", "3.11", "3.12"]
+        python-version: ["3.11", "3.12", "3.13"]
 
     steps:
     - uses: actions/checkout@v4

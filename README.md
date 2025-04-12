@@ -29,7 +29,6 @@ from pyprlink.tcp_client import ask_PV
 # Send commands to PrairieView
 ask_PV('-gmp', 'x')  # Get microscope position
 ask_PV('-pg', '3', '400')  # Set page number and value
-ask_PV('-x')  # Exit command
 ```
 
 ### From Command Line
@@ -43,7 +42,6 @@ pyprlink --help
 # Send commands
 pypr -gmp x
 pypr -pg 3 400
-pypr -x
 ```
 
 ## Development
@@ -63,9 +61,8 @@ pytest
 ## Examples
 
 Common commands:
-- `pypr -gmp x` - Get microscope position
-- `pypr -pg 3 400` - Set page parameters
-- `pypr -x` - Exit command
+- `pypr -gmp x` - Get microscope position for x-stage
+- `pypr -pg 3 400` - Set PMT gain on channel 3 to 400
 
 ## License
 
