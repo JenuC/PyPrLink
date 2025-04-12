@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "TCP/IP client for communicating with PriarieView"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["dotenv"]
+dependencies = ["python-dotenv"]
 authors = [
     {name = "Jenu Chacko", email ="jenu.chacko@bruker.com"}
 ]
@@ -22,5 +22,4 @@ python_files = ["test_*.py"]
 addopts = "-v"
 
 [project.scripts]
-pyprlink = "pyprlink.main:main"
-gmp-client = "pyprlink.gmp_client:main"
+pypr = "pyprlink.main:main"

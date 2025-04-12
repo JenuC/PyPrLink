@@ -7,30 +7,43 @@ Python-PrairieLink (PyPrLink)
 ## Installation
 
 ```bash
-pip install -e .
+pip install pyprlink
+```
+
+## Configuration
+
+Create a `.env` file in your project directory with the following variables:
+```
+ADDRESS=your_server_address
+PORT=your_port_number
+LOG_LEVEL=INFO  # or DEBUG or ERROR
 ```
 
 ## Usage
 
+### As a Python Module
+
 ```python
-from pyprlink.tcp_client import TCPClient
+from pyprlink.tcp_client import ask_PV
 
-# Create a client
-client = TCPClient(host='localhost', port=5000)
+# Send commands to PrairieView
+ask_PV('-gmp', 'x')  # Get microscope position
+ask_PV('-pg', '3', '400')  # Set page number and value
+ask_PV('-x')  # Exit command
+```
 
-# Connect to the server
-if client.connect():
-    try:
-        # Send a message
-        client.send("Hello, server!")
-        
-        # Receive response
-        response = client.receive()
-        if response:
-            print(response.decode())
-    finally:
-        # Always disconnect when done
-        client.disconnect()
+### From Command Line
+
+After installation, you can use the `pyprlink` command directly:
+
+```bash
+# Get help
+pyprlink --help
+
+# Send commands
+pyprlink -gmp x
+pyprlink -pg 3 400
+pyprlink -x
 ```
 
 ## Development
@@ -47,8 +60,13 @@ Run tests:
 pytest
 ```
 
-## examples
+## Examples
 
-- ask_PV('-gmp','x')
-- ask_PV('-pg', '3','400')
-- ask_PV('-x')
+Common commands:
+- `pyprlink -gmp x` - Get microscope position
+- `pyprlink -pg 3 400` - Set page parameters
+- `pyprlink -x` - Exit command
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
