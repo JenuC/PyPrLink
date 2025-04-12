@@ -8,7 +8,7 @@ dependencies = ["python-dotenv"]
 authors = [
     {name = "Jenu Chacko", email ="jenu.chacko@wisc.com"}
 ]
-license = "MIT"
+license = {text = "MIT"}
 keywords = ["prairie-view", "microscopy", "bruker-fm"]
 classifiers = [
     "Development Status :: 4 - Beta",
