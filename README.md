@@ -41,9 +41,9 @@ After installation, you can use the `pyprlink` command directly:
 pyprlink --help
 
 # Send commands
-pyprlink -gmp x
-pyprlink -pg 3 400
-pyprlink -x
+pypr -gmp x
+pypr -pg 3 400
+pypr -x
 ```
 
 ## Development
@@ -63,9 +63,9 @@ pytest
 ## Examples
 
 Common commands:
-- `pyprlink -gmp x` - Get microscope position
-- `pyprlink -pg 3 400` - Set page parameters
-- `pyprlink -x` - Exit command
+- `pypr -gmp x` - Get microscope position
+- `pypr -pg 3 400` - Set page parameters
+- `pypr -x` - Exit command
 
 ## License
 
