@@ -1,20 +1,20 @@
 site_name: PyPrLink
 site_description: TCP/IP client for communicating with PrairieView
-repo_url: https://github.com/jenuv/PV-FLIM
-repo_name: jenuv/PV-FLIM
+repo_url: https://github.com/jenuc/PyPrLink
+repo_name: jenuc/PyPrLink
 
 theme:
   name: material
   palette:
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: blue
+      accent: blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: blue
+      accent: blue
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -26,12 +26,40 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+  icon:
+    logo: material/microscope
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/favicon.png
+  color:
+    primary: custom
+    accent: custom
+    scheme: default
+    palette:
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: blue
+        accent: blue
+        toggle:
+          icon: material/brightness-7
+          name: Switch to dark mode
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: blue
+        accent: blue
+        toggle:
+          icon: material/brightness-4
+          name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
   - Getting Started:
     - Installation: getting-started/installation.md
-    - Quick Start: getting-started/quickstart.md
+    #- Quick Start: getting-started/quickstart.md
   - User Guide:
     - Configuration: user-guide/configuration.md
     - Basic Usage: user-guide/basic-usage.md
@@ -39,6 +67,7 @@ nav:
     - Overview: commands/index.md
     - Microscope Control: commands/microscope.md
     - System Commands: commands/system.md
+    - Command Reference: commands/command-reference.md
   - API Reference: api-reference.md
   - Contributing: contributing.md
   - Changelog: changelog.md

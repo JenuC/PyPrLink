@@ -1,0 +1,169 @@
+:root {
+  --md-primary-fg-color: #00529B;
+  --md-primary-fg-color--light: #0066CC;
+  --md-primary-fg-color--lighter: #3385D6;
+  --md-primary-fg-color--dark: #003D73;
+  --md-primary-fg-color--darker: #002447;
+  --md-primary-fg-color--darkest: #001833;
+  --md-accent-fg-color: #00529B;
+  --md-default-fg-color: #333333;
+  --md-default-bg-color: #FFFFFF;
+}
+
+.md-header {
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-tabs {
+  background-color: var(--md-primary-fg-color--light);
+}
+
+.md-tabs__link {
+  color: var(--md-default-bg-color);
+}
+
+.md-tabs__link--active {
+  color: var(--md-default-bg-color);
+  border-bottom: 2px solid var(--md-default-bg-color);
+}
+
+.md-nav__link:hover {
+  color: var(--md-primary-fg-color);
+}
+
+.md-nav__link--active {
+  color: var(--md-primary-fg-color);
+}
+
+.md-content__button {
+  color: var(--md-primary-fg-color);
+}
+
+.md-footer {
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-footer-copyright {
+  color: var(--md-default-bg-color);
+}
+
+.md-footer__title {
+  color: var(--md-default-bg-color);
+}
+
+.md-footer__link {
+  color: var(--md-default-bg-color);
+}
+
+.md-footer__link:hover {
+  color: var(--md-default-bg-color);
+  opacity: 0.8;
+}
+
+.md-nav__title {
+  color: var(--md-primary-fg-color--darker);
+  font-weight: 700;
+}
+
+.md-nav__section .md-nav__title {
+  color: var(--md-primary-fg-color--darker);
+  font-weight: 700;
+}
+
+.md-nav__section .md-nav__section .md-nav__title {
+  color: var(--md-primary-fg-color--dark);
+  font-weight: 600;
+}
+
+.md-nav__section .md-nav__section .md-nav__section .md-nav__title {
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+.md-nav__section .md-nav__section .md-nav__section .md-nav__section .md-nav__title {
+  color: var(--md-primary-fg-color--light);
+  font-weight: 500;
+}
+
+/* Main navigation items (Getting Started, User Guide, etc.) */
+.md-nav__item .md-nav__link {
+  color: var(--md-primary-fg-color--darkest);
+  font-weight: 700;
+}
+
+/* First level sections under main items */
+.md-nav__item .md-nav__section .md-nav__title {
+  color: var(--md-primary-fg-color--darker);
+  font-weight: 600;
+}
+
+/* Second level sections */
+.md-nav__item .md-nav__section .md-nav__section .md-nav__title {
+  color: var(--md-primary-fg-color--dark);
+  font-weight: 600;
+}
+
+/* Third level sections */
+.md-nav__item .md-nav__section .md-nav__section .md-nav__section .md-nav__title {
+  color: var(--md-primary-fg-color);
+  font-weight: 500;
+}
+
+/* Fourth level sections */
+.md-nav__item .md-nav__section .md-nav__section .md-nav__section .md-nav__section .md-nav__title {
+  color: var(--md-primary-fg-color--light);
+  font-weight: 500;
+}
+
+/* Main section titles in index.md */
+.md-content__inner strong {
+  color: var(--md-primary-fg-color--darkest);
+  font-weight: 700;
+}
+
+/* First level sections in index.md */
+.md-content__inner ul li strong {
+  color: var(--md-primary-fg-color--darker);
+  font-weight: 600;
+}
+
+/* Second level sections in index.md */
+.md-content__inner ul li ul li strong {
+  color: var(--md-primary-fg-color--dark);
+  font-weight: 600;
+}
+
+/* Main navigation items in the sidebar */
+.md-nav__item--section > .md-nav__link {
+  color: var(--md-primary-fg-color--darkest) !important;
+  font-weight: 700 !important;
+}
+
+/* First level sections under main items */
+.md-nav__item--section .md-nav__item--section > .md-nav__link {
+  color: var(--md-primary-fg-color--darker) !important;
+  font-weight: 600 !important;
+}
+
+/* Second level sections */
+.md-nav__item--section .md-nav__item--section .md-nav__item--section > .md-nav__link {
+  color: var(--md-primary-fg-color--dark) !important;
+  font-weight: 600 !important;
+}
+
+/* Regular links in the navigation */
+.md-nav__link {
+  color: var(--md-primary-fg-color--lighter) !important;
+  font-weight: 500 !important;
+}
+
+/* Active links in the navigation */
+.md-nav__link--active {
+  color: var(--md-primary-fg-color) !important;
+  font-weight: 600 !important;
+}
+
+/* Hover state for links */
+.md-nav__link:hover {
+  color: var(--md-primary-fg-color--light) !important;
+} 
