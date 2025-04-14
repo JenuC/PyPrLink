@@ -52,8 +52,16 @@ tests/
 
 ## Contributing
 
-See the [Contributing](contributing.md) guide for information on how to contribute to this project.
+Information on how to contribute to the PyPrLink project.
+
+*(Outline contribution guidelines, code style, pull request process, etc.)*
 
 ## Changelog
 
-Check the [Changelog](changelog.md) for version history and updates. 
+Check the [Changelog](changelog.md) for version history and updates.
+
+# Python API Reference
+
+Detailed documentation for the PyPrLink Python API classes and functions.
+
+*(Use autodoc or manually document the Python API here)* 

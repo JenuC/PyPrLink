@@ -65,8 +65,12 @@ nav:
     - Basic Usage: user-guide/basic-usage.md
   - Command Reference:
     - Overview: commands/index.md
-    - Microscope Control: commands/microscope.md
     - System Commands: commands/system.md
+    - Imaging Commands: commands/imaging.md
+    - Stage Commands: commands/stage.md
+    - Laser Commands: commands/laser.md
+    - Experiment Commands: commands/experiment.md
+    - Microscope Control: commands/microscope.md
     - Command Reference: commands/command-reference.md
   - API Reference: api-reference.md
   - Contributing: contributing.md
