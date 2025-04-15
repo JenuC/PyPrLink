@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv() 
 
 
-
+## TODO: change to config
 # tcp/ip address and port
 ADDRESS = os.getenv("ADDRESS")
 PORT = os.getenv("PORT")
@@ -44,16 +44,17 @@ def read_until_done(sock):
             break
     return results
 
-def ask_PV(*args):
-    logging.debug((ADDRESS,int(PORT)))
+def ask_PV(*args):    
+    logging.debug((ADDRESS,PORT))
     command = chr(1).join(args)
     if not command.endswith('\r\n'):
         command += '\r\n'    
     logging.debug(command[:-2])
+    
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(5)
-        sock.connect((ADDRESS,PORT))
+        sock.connect((ADDRESS,int(PORT)))
         sock.sendall(command.encode())
         results = read_until_done(sock)
         print(f" {args}, {results}")    
@@ -63,4 +64,5 @@ def ask_PV(*args):
         if sock:
             sock.sendall("-x".encode())
             sock.close()
+            logging.debug(("closing",ADDRESS,PORT))
         
