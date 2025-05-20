@@ -14,3 +14,4 @@ uv.lock
 
 # test loading locally
 src/pyprlink/install_test.py
+.ipynb_checkpoints
